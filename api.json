@@ -1,0 +1,58 @@
+{
+    "spaces": [
+      {
+        "space": "",
+        "id": "With your Tent",
+        "location": "Karup, Central Jutland, Denmark",
+        "price": "from 22",
+        "rating": "4,8",
+        "max_persons": "10",
+
+        "labels": [
+          {
+            "icon": "",
+            "label": "With your Tent"
+          },
+          {
+            "icon": "",
+            "label": "With your Caravan"
+          },
+          {
+            "icon": "",
+            "label": "With your Van"
+          },
+          {
+            "icon": "",
+            "label": "With your Motorhome"
+          },
+          {
+            "icon": "",
+            "label": "Trailer or caravan"
+          },
+          {
+            "icon": "",
+            "label": "Lodge"
+          }
+        ],
+        "availability": [
+          {
+            "start_date": "2023-07-05",
+            "end_date": "2023-08-10",
+            "available": true
+          },
+          {
+            "start_date": "2023-07-05",
+            "end_date": "2023-08-10",
+            "available": false
+          },
+          {
+            "start_date": "2023-07-05",
+            "end_date": "2023-08-10",
+            "available": false
+          }
+        ]
+      }
+    ]
+  }
+  
+  
