@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campspace widget</title>
+    <script src="/script.js"></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+
+
+    <!-- <% spaces.forEach(space=> { %> -->
+
+    <button aria-label="open" class="widget-button" popovertarget="my-popover-widget" popovertargetaction="show">
+        Book Now </button>
+
+
+    <button popovertarget="mypopover" popovertargetaction="hide">
+        Close</button>
+    <section popover id="my-popover-widget" class="clamping-widget">
+
+        <div class="widget-images-slider">
+
+            <img src="/images/luxury_tent_landscape_960.jpeg" alt="Image of campspace">
+
+
+            <img src="/images/luxury_tent_landscape_960.jpeg" alt="Image of campspace">
+
+
+            <img src="/images/luxury_tent_landscape_960.jpeg" alt="Image of campspace">
+
+        </div>
+
+        <div class="widget-content-overlay">
+            <img width="/" height="/" src="/images/campspace-logo-white.png" alt="logo-campspace">
+            <p class="card-strong">from € 22</p>
+            <div> <a
+                    href="https://campspace.com/en/s/landgoed-met-zwemvijver-vuurplaatsen-2ha-wandelgebied_3606?pitchTypeId=1631&">Book
+                    Now</a></div>
+        </div>
+
+
+    </section>
+    <% }) %>
+</body>
+
+</html>
