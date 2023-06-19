@@ -1,52 +1,171 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campspace widget</title>
-    <script src="/script.js"></script>
-    <link rel="stylesheet" href="/style.css">
-</head>
-
-<body>
+<%- include('./partials/head') %>
 
 
 
-    <!-- <% spaces.forEach(space=> { %> -->
+    <% spaces.forEach(space=> { %>
 
-    <button aria-label="open" class="widget-button" popovertarget="my-popover-widget" popovertargetaction="show">
-        Book Now </button>
+        <script>
+            // Your JavaScript code here
+            const section = document.createElement("section");
+            section.classList.add("campspace-widget");
+            const widget = `   <style>
+        /* Inline CSS styles for the campspace widget */
+        .campspace-widget {
+  --color-campspace: #0db08a;
+  --color-yellow-campspace: #fdb000;
+  --color-light-grey-campspace: #f5f5f1;
+  --color-dark-grey-campspace: #32322e;
+  --color-blue-campspace: #4376ba;
+  --color-primary-campspace: var(--color-campspace);
+  --color-secondary-campspace: var(--color-yellow);
+  --color-tertiary-campspace: var(--color-blue);
+  --border-radius-small-campspace: 5px;
+  --border-radius-medium-campspace: 8px;
+  --border-radius-large-campspace: 16px;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.campspace-button {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  padding: 15px 30px;
+  background-color: var(--color-campspace);
+  color: var(--color-light-grey-campspace);
+  border-radius: 8px 8px 0 0;
+  border: none;
+  cursor: pointer;
+  z-index: 9999;
+  transform: translate(50%, -50%) rotate(-90deg);
+}
+
+.campspace-widget article {
+  --campspace-height-card: 400px;
+  --campspace-width-card: 550px;
+  height: var(--campspace-height-card);
+  width: var(--campspace-width-card);
+  border-radius: var(--border-radius-medium-campspace);
+  position: absolute;
+  overflow: hidden;
+}
+
+.widget-images-slider {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  animation: slide 16s infinite;
+  list-style-type: none;
+}
+
+.widget-images-slider img {
+  width: 100%;
+}
+
+/* CONTENT OVERLAY */
+.widget-content-overlay div {
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+}
+
+.widget-content-overlay img {
+  position: absolute;
+  width: 10em;
+  left: 10px;
+  top: 10px;
+}
+
+.widget-content-overlay p {
+  position: absolute;
+  right: 10px;
+  top: -7px;
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: var(--border-radius-medium-campspace);
+  color: var(--color-light-grey-campspace);
+  background-color: var(--color-dark-grey-campspace);
+}
+
+/* LINK TO CAMPSPACE  */
+.widget-content-overlay a {
+  position: absolute;
+  bottom: 50px;
+  font-weight: 500;
+  color: var(--color-light-grey-campspace);
+  background-color: var(--color-blue-campspace);
+  border-radius: 8px;
+  text-decoration: none;
+  touch-action: manipulation;
+  padding: 1rem 2rem;
+}
+
+@keyframes slide {
+  0%,
+  33% {
+    transform: translateX(0);
+  }
+  36%,
+  67% {
+    transform: translateX(-100%);
+  }
+  70%,
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+    </style>
+
+            
+            
+            
+            
+            
+            <section class="campspace-widget">
+
+<button class="campspace-button" popovertarget="my-popover-widget" popovertargetaction="show">
+    Book Now </button>
 
 
-    <button popovertarget="mypopover" popovertargetaction="hide">
-        Close</button>
-    <section popover id="my-popover-widget" class="clamping-widget">
+<button popovertarget="mypopover" popovertargetaction="hide">
+    Close</button>
 
-        <div class="widget-images-slider">
+<article popover id="my-popover-widget">
 
-            <img src="/images/luxury_tent_landscape_960.jpeg" alt="Image of campspace">
+    <div class="widget-images-slider">
 
-
-            <img src="/images/luxury_tent_landscape_960.jpeg" alt="Image of campspace">
+        <img src="/images/luxury_tent_landscape_960.jpeg" alt="">
 
 
-            <img src="/images/luxury_tent_landscape_960.jpeg" alt="Image of campspace">
-
-        </div>
-
-        <div class="widget-content-overlay">
-            <img width="/" height="/" src="/images/campspace-logo-white.png" alt="logo-campspace">
-            <p class="card-strong">from € 22</p>
-            <div> <a
-                    href="https://campspace.com/en/s/landgoed-met-zwemvijver-vuurplaatsen-2ha-wandelgebied_3606?pitchTypeId=1631&">Book
-                    Now</a></div>
-        </div>
+        <img src="/images/luxury_tent_landscape_960.jpeg" alt="">
 
 
-    </section>
-    <% }) %>
-</body>
+        <img src="/images/luxury_tent_landscape_960.jpeg" alt="">
 
-</html>
+    </div>
+
+    <div class="widget-content-overlay">
+        <img width="/" height="/" src="/images/campspace-logo-white.png" alt="logo campspace">
+        <p>from € 22</p>
+        <div> <a
+                href="https://campspace.com/en/s/landgoed-met-zwemvijver-vuurplaatsen-2ha-wandelgebied_3606?pitchTypeId=1631&">Book
+                Now</a></div>
+    </div>
+
+
+</article>
+</section>
+             `;
+            section.innerHTML = widget;
+            const body = document.querySelector("body");
+            body.appendChild(section);
+        </script>
+
+
+
+        <% }) %>
+            </body>
+
+            </html>

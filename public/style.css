@@ -1,4 +1,4 @@
-:root {
+.campspace-widget {
   --color-campspace: #0db08a;
   --color-yellow-campspace: #fdb000;
   --color-light-grey-campspace: #f5f5f1;
@@ -10,50 +10,48 @@
   --border-radius-small-campspace: 5px;
   --border-radius-medium-campspace: 8px;
   --border-radius-large-campspace: 16px;
-}
-
-* :after,
-:before {
   box-sizing: border-box;
   margin: 0;
-}
-
-.clamping-widget h3 {
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.clamping-widget {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.campspace-button {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  padding: 15px 30px;
+  background-color: var(--color-campspace);
+  color: var(--color-light-grey-campspace);
+  border-radius: 8px 8px 0 0;
+  border: none;
+  cursor: pointer;
+  z-index: 9999;
+  transform: translate(50%, -50%) rotate(-90deg);
+}
+
+.campspace-widget article {
   --campspace-height-card: 400px;
-  --campspace-width-card: 600px;
-  right: 0;
+  --campspace-width-card: 550px;
   height: var(--campspace-height-card);
   width: var(--campspace-width-card);
   border-radius: var(--border-radius-medium-campspace);
-}
-
-.widget-images-slider {
-  display: flex;
-  list-style-type: none;
-  width: 100%;
-  height: 100%;
   position: absolute;
   overflow: hidden;
 }
 
-.widget-images-slider img {
-  border-radius: var(--border-radius-medium-campspace);
+.widget-images-slider {
+  display: flex;
   width: 100%;
-  animation: slide 16s infinite;
-}
-
-.widget-content-overlay {
   height: 100%;
-  width: 100%;
-  position: absolute;
+  animation: slide 16s infinite;
+  list-style-type: none;
 }
 
+.widget-images-slider img {
+  width: 100%;
+}
+
+/* CONTENT OVERLAY */
 .widget-content-overlay div {
   display: flex;
   justify-content: center;
@@ -78,6 +76,7 @@
   background-color: var(--color-dark-grey-campspace);
 }
 
+/* LINK TO CAMPSPACE  */
 .widget-content-overlay a {
   position: absolute;
   bottom: 50px;
@@ -88,20 +87,6 @@
   text-decoration: none;
   touch-action: manipulation;
   padding: 1rem 2rem;
-}
-
-.widget-button {
-  position: fixed;
-  right: 20px;
-  top: 50%;
-  padding: 15px 30px;
-  background-color: var(--color-campspace);
-  color: var(--color-light-grey-campspace);
-  border-radius: 8px 8px 0 0;
-  border: none;
-  cursor: pointer;
-  z-index: 9999;
-  transform: translate(50%, -50%) rotate(-90deg);
 }
 
 @keyframes slide {
