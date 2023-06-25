@@ -16,7 +16,7 @@ Deze widget stelt Campspace-hosts in staat om hun Campspace-boekingspagina op hu
 ## Beschrijving
 <img width="250" alt="Screenshot 2023-06-22 at 15 08 37" src="https://github.com/mcphendriks/proof-of-concept/assets/106346778/82da1861-a1a4-450e-9d04-3563ed99de5e">
 
-<img width="500" alt="Screenshot 2023-06-22 at 15 08 01" src="https://github.com/mcphendriks/proof-of-concept/assets/106346778/aff9bbe3-eb71-46bc-8f55-57a3c4f5281f">
+<img width="500" alt="Screenshot 2023-06-25 at 14 58 32" src="https://github.com/mcphendriks/proof-of-concept/assets/106346778/3a42f1f9-d03a-44d0-a425-de8ca0d945d9">
 
 
 
