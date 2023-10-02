@@ -46,7 +46,7 @@ De "campspace-widget-content-overlay" class wordt gebruikt voor het positioneren
 
 JS technieken:
 
-Er wordt gebruik gemaakt van de fetch API om gegevens op te halen van de URL "https://campspace-dummy-data-test-a454ba90df28.herokuapp.com/hosts". Dit lijkt een externe API te zijn die host-gegevens retourneert.
+Er wordt gebruik gemaakt van de fetch API om gegevens op te halen van de URL "https://campspace-dummy-data-test-a454ba90df28.herokuapp.com/hosts". 
 De ontvangen gegevens worden omgezet naar JSON met behulp van response.json().
 Er wordt een section-element gemaakt en toegevoegd aan de body van de pagina.
 Er wordt gezocht naar de host met id 1 en de bijbehorende afbeeldingen worden opgehaald.
